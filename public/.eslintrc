@@ -1,0 +1,13 @@
+{
+	"env" : {
+		"browser" : true
+	},
+
+	"globals" : {
+		"requirejs" : false
+	},
+
+	"rules" : {
+		"no-alert" : 1
+	}
+}

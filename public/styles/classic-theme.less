@@ -1,0 +1,70 @@
+@background: #DDD;
+
+body.classic-theme {
+	background : @background;
+
+	.cards {
+		font-family : Arial;
+
+		> .card {
+			background : @background;
+
+			&, > .title {
+				box-shadow : inset -50px 0px 50px -50px rgba(125,125,125,0.51)
+			}
+
+			> .title {
+				background      : #96BB96;
+				padding         : 10px;
+				display         : block;
+				text-decoration : none;
+			}
+
+			> button.dismiss {
+				color      : #FEFEFE;
+				background : green;
+			}
+
+			.actions {
+				@seen-background : rgba(108,108,108,0.3);
+
+				&:after {
+					background : @seen-background;
+				}
+
+				.action {
+					&.already-seen:before {
+						background : @seen-background;
+					}
+
+					> .header {
+						.who {
+							font-weight    : bold;
+							text-transform : uppercase;
+						}
+						.when {
+							font-size : smaller;
+							color     : #999;
+						}
+					}
+
+					> .details {
+						.comment {
+							background : white;
+						}
+					}
+
+					&:not(.already-seen) + .already-seen {
+						margin-top: 10px;
+					}
+				}
+			}
+		}
+	}
+
+	.no-cards {
+		font-size   : 40px;
+		font-weight : bold;
+		font-family : arial;
+	}
+}

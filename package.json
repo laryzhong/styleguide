@@ -1,0 +1,24 @@
+{
+	"name": "demux",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node server.js"
+	},
+	"dependencies": {
+		"body-parser"     : "1.15.x",
+		"cli-color"       : "1.x.x",
+		"cookie-parser"   : "1.4.x",
+		"express"         : "4.13.x",
+		"less"            : "2.6.x",
+		"less-middleware" : "2.1.x",
+		"limits"          : "0.0.x",
+		"lodash"          : "3.10.x",
+		"morgan"          : "1.7.x",
+		"static-favicon"  : "1.0.x",
+		"string"          : "3.3.x"
+	},
+	"devDependencies" : {
+		"bower" : "1.7.x"
+	}
+}

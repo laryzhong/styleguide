@@ -1,0 +1,11 @@
+{
+	"name"         : "Demux",
+	"private"      : true,
+	"dependencies" : {
+		"jquery"         : "2.1.x",
+		"requirejs"      : "2.1.x",
+		"require-css"    : "0.1.x",
+		"requirejs-text" : "2.0.x",
+		"moment"         : "2.12.x"
+	}
+}

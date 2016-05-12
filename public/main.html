@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel='stylesheet' type='text/css' href='styles/styles.css'/>
+	<script type="text/javascript" src="lib/vendor/bower_components/requirejs/require.js"></script>
+	<script type="text/javascript" src="requireConfig.js"></script>
+</head>
+
+<body class="lcars-theme">
+	<div class="cards flex-row" data-bind="foreach : cards">
+		<div class="card flex-col flex-shrink" data-bind="css : [{ visible : isVisible }, 'color-' + _.random(1,3)]">
+			<div class="title flex-row flex-center" data-bind="attr : { title : name }">
+				<a class="flex-grow" target="_blank" data-bind="
+					attr : { href : 'https://trello.com/c/' + $data.id },
+					text : name
+				"></a>
+			</div>
+			<div class="actions flex-col flex-grow" data-bind="foreach : actions">
+				<div class="action" data-bind="css : { 'already-seen' : when.isSameOrBefore($parent.lastSeenDate) }">
+					<div class="header flex-row flex-h-full flex-v-center">
+						<div class="who"  data-bind="
+							text : who,
+							css  : { visible : $index() == 0 || $parent.actions[$index() - 1].who != who }
+						"></div>
+						<div class="when" data-bind="text : when.fromNow()"></div>
+					</div>
+
+					<div class="details" data-bind="template : { name : type }"></div>
+				</div>
+			</div>
+
+			<button class="dismiss" data-bind="click : function() { $root.dismiss($data.id) }">Mark As Read</button>
+		</div>
+	</div>
+
+	<div class="no-cards" data-bind="visible : cards.every(card => !card.isVisible)">
+		there are no new notifications at this time
+	</div>
+
+	<template id="commentCard">
+		<div class="comment" data-bind="html : $parent.formatComment(comment)"></div>
+	</template>
+
+	<template id="addAttachmentToCard">
+		<img class="attachment" data-bind="attr : { src : origAction.data.attachment.url }"></img>
+	</template>
+
+	<template id="addChecklistToCard">
+		<div class="checklist added" data-bind="text : update" title="Added a checklist"></div>
+	</template>
+
+	<template id="removeChecklistFromCard">
+		<div class="checklist removed" data-bind="text : update" title="Removed a checklist"></div>
+	</template>
+
+	<template id="addMemberToCard">
+		<div class="member added" data-bind="text : update"></div>
+	</template>
+
+	<template id="removeMemberFromCard">
+		<div class="member removed" data-bind="text : update"></div>
+	</template>
+
+	<template id="deleteCard">
+		<div>DELETED CARD</div>
+	</template>
+
+	<template id="moveCardToBoard">
+		<div>moved to board</div>
+	</template>
+
+	<template id="updateCard">
+		<div data-bind="text : update"></div>
+	</template>
+
+	<script type="text/javascript">
+		require(['jquery', 'knockout', 'main'], function($, ko, mainVM) {
+			ko.applyBindings(mainVM);
+		});
+	</script>
+</body>
+
+</html>
