@@ -1,4 +1,5 @@
-//"use strict"
+/* global Trello */
+"use strict"
 
 define(function(require, exports, module) {
 
@@ -23,7 +24,7 @@ const cardActions = [
 	'updateCard'
 ];
 
-var currentUser;
+let currentUser = null;
 
 const MainVM = JS.class('MainVM', {
 	mixin : ObservableClass,
@@ -37,15 +38,24 @@ const MainVM = JS.class('MainVM', {
 		lastActionDate : {
 			type : Date,
 			init : null
+		},
+
+		theme : {
+			type       : 'classic',
+			observable : true
 		}
 	},
 
 	constructor : function() {
 		setInterval(() => this.getCards(), 30 * 1000);
 
+		// look for the theme in the URL
+		let params = new URLSearchParams(window.location.search.substring(1));
+		this.theme = params.get('theme') || localStorage.get('theme') || 'classic';
+
 		ko.computed(() => {
 			let newActions = _(this.cards).map(card => card.newActionsCount()).sum().valueOf();
-			document.title = `(${newActions}) Trello Inbox`;
+			document.title = `(${newActions}) Demux`;
 		});
 	},
 

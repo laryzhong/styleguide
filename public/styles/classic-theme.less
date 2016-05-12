@@ -1,7 +1,26 @@
 @background: #DDD;
 
+@scrollbar-width       : 5px;
+@scrollbar-thumb-width : 5px;
+
 body.classic-theme {
 	background : @background;
+
+	*::-webkit-scrollbar {
+		width  : @scrollbar-width;
+		height : @scrollbar-width;
+	}
+
+	*::-webkit-scrollbar-thumb {
+		-webkit-border-radius : @scrollbar-width;
+		background-clip       : padding-box;
+		border                : ((@scrollbar-width - @scrollbar-thumb-width)/2) solid transparent;
+		background            : #AAA;
+
+		&:vertical {
+			min-height: 30px;
+		}
+	}
 
 	.cards {
 		font-family : Arial;
@@ -17,7 +36,11 @@ body.classic-theme {
 				background      : #96BB96;
 				padding         : 10px;
 				display         : block;
-				text-decoration : none;
+
+				a {
+					text-decoration : none;
+					color           : black;
+				}
 			}
 
 			> button.dismiss {

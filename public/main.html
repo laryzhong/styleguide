@@ -7,7 +7,7 @@
 	<script type="text/javascript" src="requireConfig.js"></script>
 </head>
 
-<body class="lcars-theme">
+<body data-bind="css : theme + '-theme'">
 	<div class="cards flex-row" data-bind="foreach : cards">
 		<div class="card flex-col flex-shrink" data-bind="css : [{ visible : isVisible }, 'color-' + _.random(1,3)]">
 			<div class="title flex-row flex-center" data-bind="attr : { title : name }">
