@@ -1,5 +1,3 @@
-FROM mongo:3.0.6
+FROM node:6-onbuild
 
-COPY mongostart.sh /mongostart.sh
-
-CMD /mongostart.sh
+EXPOSE 3030

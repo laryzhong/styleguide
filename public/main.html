@@ -23,7 +23,7 @@
 							text : who,
 							css  : { visible : $index() == 0 || $parent.actions[$index() - 1].who != who }
 						"></div>
-						<div class="when" data-bind="text : when.fromNow()"></div>
+						<div class="when" data-bind="text : $root.fromNow(when)"></div>
 					</div>
 
 					<div class="details" data-bind="template : { name : type }"></div>

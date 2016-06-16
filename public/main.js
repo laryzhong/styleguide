@@ -43,15 +43,23 @@ const MainVM = JS.class('MainVM', {
 		theme : {
 			type       : 'classic',
 			observable : true
+		},
+
+		currentTime : {
+			type       : Moment,
+			observable : true
 		}
 	},
 
 	constructor : function() {
 		setInterval(() => this.getCards(), 30 * 1000);
 
+		setInterval(() => { this.currentTime = new Moment() }, 10000);
+
 		// look for the theme in the URL
 		let params = new URLSearchParams(window.location.search.substring(1));
 		this.theme = params.get('theme') || localStorage.get('theme') || 'classic';
+		localStorage.set('theme', this.theme);
 
 		ko.computed(() => {
 			let newActions = _(this.cards).map(card => card.newActionsCount()).sum().valueOf();
@@ -120,6 +128,10 @@ const MainVM = JS.class('MainVM', {
 		dismiss : function(cardID) {
 			let card = _.find(this.cards, { id : cardID });
 			if (card) card.dismiss();
+		},
+
+		fromNow : function(moment) {
+			return moment.from(this.currentTime);
 		}
 	}
 });
@@ -174,7 +186,7 @@ const Card = JS.class('Card', {
 		},
 
 		formatComment : function(comment) {
-			return comment.replace(/(?:^|\s+)@([^\s]+)/g, '<b> $1</b>');
+			return escapeHtml(comment).replace(/(?:^|\s+)@([^\s]+)/g, '<b> $1</b>');
 		}
 	}
 });
@@ -196,5 +208,11 @@ Trello.authorize({
 	},
 	error      : () => { console.error('not authorized') }
 });
+
+function escapeHtml(str) {
+	var div = document.createElement('div');
+	div.appendChild(document.createTextNode(str));
+	return div.innerHTML;
+}
 
 });
