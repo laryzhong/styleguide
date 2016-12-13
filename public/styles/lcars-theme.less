@@ -8,6 +8,7 @@
 @purple : #C9C;
 @blue   : #99F;
 @salmon : #F96;
+@red    : #F00;
 
 @scrollbar-width       : 3px;
 @scrollbar-thumb-width : 3px;
@@ -108,10 +109,14 @@ body.lcars-theme {
 					.comment {
 						color : #CCC;
 
-						b {
+						.user {
 							font-weight    : 400;
 							color          : white;
 							text-transform : uppercase;
+
+							&.current {
+								color: @red;
+							}
 						}
 					}
 				}

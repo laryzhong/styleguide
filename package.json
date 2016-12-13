@@ -1,6 +1,6 @@
 {
 	"name": "demux",
-	"version": "0.0.1",
+	"version": "1.0.1",
 	"private": true,
 	"scripts": {
 		"start": "node server.js"
@@ -19,6 +19,7 @@
 		"string"          : "3.3.x"
 	},
 	"devDependencies" : {
+		"eslint-config-roadmunk" : "roadmunk/eslint-config-roadmunk",
 		"bower" : "1.7.x"
 	}
 }

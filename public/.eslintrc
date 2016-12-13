@@ -4,7 +4,8 @@
 	},
 
 	"globals" : {
-		"requirejs" : false
+		"requirejs" : false,
+		"define" : false
 	},
 
 	"rules" : {
