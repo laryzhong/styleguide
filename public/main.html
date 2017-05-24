@@ -3,6 +3,7 @@
 
 <head>
 	<link rel='stylesheet' type='text/css' href='styles/styles.css'/>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<script type="text/javascript" src="lib/vendor/bower_components/requirejs/require.js"></script>
 	<script type="text/javascript" src="requireConfig.js"></script>
 </head>
@@ -71,7 +72,10 @@
 	</template>
 
 	<template id="updateCard">
-		<div data-bind="text : update"></div>
+		<div>
+			<span class="icon" data-bind="html : icon"></span>
+			<span data-bind="text : update"><span>
+		</div>
 	</template>
 
 	<script type="text/javascript">

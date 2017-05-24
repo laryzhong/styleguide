@@ -1,3 +1,8 @@
+@font-face{
+	font-family : "Icons";
+	src         : url("fontawesome-webfont.woff");
+}
+
 body {
 	margin     : 0;
 	height     : 100vh;
@@ -81,6 +86,11 @@ body {
 					margin     : 0px 10px;
 					text-align : center;
 
+					.icon {
+						font-family  : "Icons";
+						font-size    : larger;
+					}
+
 					.comment {
 						padding     : 10px;
 						word-break  : break-word;
@@ -94,8 +104,8 @@ body {
 
 					.checklist {
 						&.added:before {
-							content      : "☑";
-							font-size    : larger;
+							content      : "\f046";
+							.icon();
 							margin-right : 5px;
 						}
 
@@ -108,11 +118,9 @@ body {
 						text-transform: uppercase;
 
 						&.added:before {
-							content      : '+';
-							font-size    : x-large;
+							content      : '\f055';
+							.icon();
 							margin-right : 5px;
-							position     : relative;
-							top          : 2px;
 						}
 
 						&.removed {
