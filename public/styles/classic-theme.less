@@ -27,6 +27,7 @@ body.classic-theme {
 		> .card {
 			background : @background;
 			margin-right: 10px;
+			border-radius: 8px;
 
 			&.color-1 .title { background : #FED766; }
 			&.color-2 .title { background : #2AB7CA; }
@@ -46,16 +47,27 @@ body.classic-theme {
 			> button.dismiss {
 				color      : #FEFEFE;
 				background : #9ad3de;
+				border-radius: 8px;
 			}
 
 			.actions {
-				@seen-background : rgba(108,108,108,0.3);
+
+				.action.already-seen:before {
+					opacity             : none;
+					transition-duration : 1s;
+					transition-delay    : 1.5s;
+					transition-property : background-color, opacity;
+				}
+
+				&:not(:hover) .action.already-seen:before {
+					transition-property : background-color, opacity;
+					transition-duration : 1s;
+					transition-delay    : 0s;
+					background-color    : #f4f4f8;
+					opacity             : 0.6;
+				}
 
 				.action {
-					&.already-seen:before {
-						background : @seen-background;
-					}
-
 					> .header {
 						.who {
 							font-weight    : bold;
@@ -69,7 +81,8 @@ body.classic-theme {
 
 					> .details {
 						.comment {
-							background : white;
+							background   : white;
+							border-radius: 8px;
 
 							.user {
 								font-weight    : 700;
