@@ -88,7 +88,7 @@ body {
 
 					.icon {
 						font-family  : "Icons";
-						font-size    : larger;
+						font-size    : medium;
 					}
 
 					.comment {
@@ -96,6 +96,16 @@ body {
 						word-break  : break-word;
 						text-align  : start;
 						white-space : pre-wrap;
+
+						a, a:visited, a:hover, a:active {
+				  			transition     : 0.5s color ease;
+							text-decoration: none;
+							color          : #2AB7CA;
+
+							&:hover {
+								color: #d73444;
+						 	}
+						}
 					}
 
 					.attachment {
