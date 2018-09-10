@@ -7,11 +7,13 @@
 	},
 	"dependencies": {
 		"body-parser": "1.15.x",
+		"consolidate": "^0.15.1",
 		"cookie-parser": "1.4.x",
 		"ejs": "^2.6.1",
 		"express": "4.13.x",
 		"less": "2.7.x",
-		"less-middleware": "2.1.x"
+		"less-middleware": "2.1.x",
+		"static-favicon": "^2.0.0-alpha"
 	},
 	"devDependencies": {
 		"eslint-config-roadmunk": "roadmunk/eslint-config-roadmunk"
