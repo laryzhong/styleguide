@@ -1,0 +1,187 @@
+<% include ./partials/start %>
+<% include ./partials/navigation %>
+
+<% const primaryColors = [
+    [
+        {
+            name : 'blue-5',
+            hex  : '#EBF4FC'
+        },
+        {
+            name : 'blue-10',
+            hex  : '#CCE3F8'
+        },
+        {
+            name : 'blue-40',
+            hex  : '#298AE4'
+        },
+        {
+            name : 'blue-50',
+            hex  : '#0074e0'
+        },
+        {
+            name : 'blue-60',
+            hex  : '#0061BC'
+        }
+    ],
+    [
+        {
+            name : 'sky-5',
+            hex  : '#EBF8FE'
+        },
+        {
+            name : 'sky-10',
+            hex  : '#CCEEFD'
+        },
+        {
+            name : 'sky-40',
+            hex  : '#2EBAF6'
+        },
+        {
+            name : 'sky-50',
+            hex  : '#00ABF5'
+        },
+        {
+            name : 'sky-60',
+            hex  : '#008FCD'
+        }
+    ],
+    [
+        {
+            name : 'teal-5',
+            hex  : '#EAFBF9'
+        },
+        {
+            name : 'teal-10',
+            hex  : '#CCF5F1'
+        },
+        {
+            name : 'teal-40',
+            hex  : '#38D9CB'
+        },
+        {
+            name : 'teal-50',
+            hex  : '#00CFBD'
+        },
+        {
+            name : 'teal-60',
+            hex  : '#00AD9E'
+        },
+    ],
+    [
+        {
+            name : 'coral-5',
+            hex  : '#FFF4F1'
+        },
+        {
+            name : 'coral-10',
+            hex  : '#FFE4DD'
+        },
+        {
+            name : 'coral-40',
+            hex  : '#FF9275'
+        },
+        {
+            name : 'coral-50',
+            hex  : '#FF7B57'
+        },
+        {
+            name : 'coral-60',
+            hex  : '#F76631'
+        },
+    ]
+]; %>
+
+
+<% const secondaryColors = [
+    [
+        {
+            name : 'green-10',
+            hex  : '#E0F8EE'
+        },
+        {
+            name : 'green-50',
+            hex  : '#11CC83'
+        },
+        {
+            name : 'green-60',
+            hex  : '#00A343'
+        }
+    ],
+    [
+        {
+            name : 'yellow-10',
+            hex  : '#FFF8DF'
+        },
+        {
+            name : 'yellow-50',
+            hex  : '#FFCC05'
+        },
+        {
+            name : 'yellow-60',
+            hex  : '#FEA02E'
+        }
+    ],
+    [
+        {
+            name : 'indigo-10',
+            hex  : '#EDEEF8'
+        },
+        {
+            name : 'indigo-50',
+            hex  : '#4953B4'
+        },
+        {
+            name : 'indigo-60',
+            hex  : '#383A9B'
+        }
+    ],
+    [
+        {
+            name : 'slate-10',
+            hex  : '#F5F5F5'
+        },
+        {
+            name : 'slate-50',
+            hex  : '#2B343C'
+        },
+        {
+            name : 'slate-60',
+            hex  : '#212B35'
+        }
+    ]
+]; %>
+
+
+
+<div class="colors">
+    <h2>colors page</h2>
+    <div class="color-list">
+        <div class="primary-colors">
+            <% primaryColors.forEach(colorBlock => { %>
+                <ul class="color-block">
+                    <% colorBlock.forEach(color => { %>
+                        <li class="<%= color.name %>" style="background-color: <%=color.hex %>;">
+                            <p><%= color.name %></p>
+                            <p><%= color.hex %></p>
+                        </li>
+                    <% }); %>
+                </ul>
+            <% }); %>
+        </div>
+        <div class="secondary-colors">
+            <% secondaryColors.forEach(colorBlock => { %>
+                <ul class="color-block">
+                    <% colorBlock.forEach(color => { %>
+                        <li class="<%= color.name %>" style="background-color: <%=color.hex %>;">
+                            <p><%= color.name %></p>
+                            <p><%= color.hex %></p>
+                        </li>
+                    <% }); %>
+                </ul>
+            <% }); %>
+        </div>
+    </div>
+</div>
+
+<% include ./partials/end %>

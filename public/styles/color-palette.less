@@ -1,0 +1,29 @@
+.colors {
+    .primary-colors,
+    .secondary-colors {
+        display: flex;
+        ul {
+            list-style-type: none;
+            width: 300px;
+            padding-left: 0;
+            font-size: 14px;
+            margin: 10px;
+            li {
+                display: flex;
+                padding: 10px 30px;
+                justify-content: space-between;
+                color: #fff;
+                p {
+                    flex-direction: row;
+                }
+                &[class$="-5"],
+                &[class$="-10"] {
+                    color: #333;
+                }
+                &[class$="-50"] {
+                    padding : 30px;
+                }
+            }
+        }
+    }
+}

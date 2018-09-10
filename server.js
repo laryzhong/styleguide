@@ -20,6 +20,10 @@ app.get('/', function(req, res) {
 	res.render('main');
 });
 
+app.get('/color-palette', function(req, res) {
+	res.render('color-palette');
+});
+
 http.createServer(app).listen(port);
 
 console.log(`Listening on http://localhost:${port}`);
