@@ -19,9 +19,11 @@ app.set('view engine', 'ejs');
 app.get('/', function(req, res) {
 	res.render('main');
 });
-
 app.get('/color-palette', function(req, res) {
 	res.render('color-palette');
+});
+app.get('/typography', function(req, res) {
+	res.render('typography');
 });
 
 http.createServer(app).listen(port);

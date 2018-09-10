@@ -1,24 +1,47 @@
 .colors {
+    width : 100%;
+    padding: 50px;
     .primary-colors,
     .secondary-colors {
         display: flex;
-        ul {
+        .color-block {
             list-style-type: none;
-            width: 300px;
+            width: 100%;
+            max-width: 300px;
             padding-left: 0;
             font-size: 14px;
-            margin: 10px;
+            margin: 10px 15px 10px 0;
             li {
                 display: flex;
-                padding: 10px 30px;
+                padding: 8px 30px;
                 justify-content: space-between;
                 color: #fff;
                 p {
                     flex-direction: row;
                 }
-                &[class$="-5"],
-                &[class$="-10"] {
-                    color: #333;
+                &.blue-5, &.blue-10 {
+                    color : @blue-60;
+                }
+                &.sky-5, &.sky-10 {
+                    color : @sky-60;
+                }
+                &.teal-5, &.teal-10 {
+                    color : @teal-60;
+                }
+                &.coral-5, &.coral-10 {
+                    color : @coral-60;
+                }
+                &.green-10 {
+                    color : @green-60;
+                }
+                &.yellow-10 {
+                    color : @yellow-60;
+                }
+                &.indigo-10 {
+                    color : @indigo-60;
+                }
+                &.slate-10 {
+                    color : @slate-60;
                 }
                 &[class$="-50"] {
                     padding : 30px;

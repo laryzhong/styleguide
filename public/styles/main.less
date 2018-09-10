@@ -1,9 +1,57 @@
 * {
-	font-family: sans-serif;
+	font-family : 'Work Sans', sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+body {
+	display : flex;
+	flex-direction: row;
+	margin: 0;
+	.content {
+		width : 78%;
+		padding: 50px;
+	}
 }
 h1 {
-	color : blue;
+	font-weight    : 500;
+	font-size      : 47px;
+	letter-spacing : -1px;
+	color          : @primary-text;
 }
 h2 {
-	color: red;
+	font-weight    : 500;
+	font-size      : 38px;
+	letter-spacing : -1px;
+	color          : @primary-text;
+}
+h3 {
+	font-weight    : 500;
+	font-size      : 30px;
+	letter-spacing : -1px;
+	color          : @primary-text;
+}
+h3.quote {
+	font-weight : 400;
+}
+h4 {
+	font-weight    : 600;
+	font-size      : 20px;
+	letter-spacing : -1px;
+	color          : @primary-text;
+}
+p.section {
+	font-weight : 400;
+	font-size   : 20px;
+	color       : @secondary-text;
+}
+p.section-lg {
+	font-weight    : 400;
+	font-size      : 17px;
+	letter-spacing : -1px;
+	color          : @secondary-text;
+}
+a {
+	font-weight     : 600;
+	font-size       : 17px;
+	color           : @blue-50;
+	text-decoration : none;
 }
