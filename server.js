@@ -25,6 +25,9 @@ app.get('/color-palette', function(req, res) {
 app.get('/typography', function(req, res) {
 	res.render('typography');
 });
+app.get('/buttons', function(req, res) {
+	res.render('buttons');
+});
 
 http.createServer(app).listen(port);
 
