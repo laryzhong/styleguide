@@ -1,30 +1,33 @@
 aside {
-    display: flex;
-	min-width: 300px;
-    height: 100%;
-    background: #F2F5F7;
-    flex-direction: column;
+    height     : 100%;
+    width      : 250px;
+    position   : fixed;
+    z-index    : 1;
+    top        : 0;
+    left       : 0;
+    overflow-x : hidden;
+    background : #F2F5F7;
     ul {
-        padding-left: 0px;
-        margin: 0;
-        list-style-type: none;
-        display: flex;
-        flex-direction: column;
+        padding-left    : 0px;
+        margin          : 0;
+        list-style-type : none;
+        display         : flex;
+        flex-direction  : column;
         li {
-            border-bottom: 1px solid @light-grey;
+            border-bottom : 1px solid @light-grey;
             a {
-                text-decoration: none;
-                font-size: 18px;
-                display: block;
-                padding: 20px;
-                color: @primary-text;
+                text-decoration : none;
+                font-size       : 18px;
+                display         : block;
+                padding         : 20px;
+                color           : @primary-text;
                 &:hover {
-                    background: #fff;
+                    background : #fff;
                 }
             }
         }
         .rm-logo {
-            width: 200px;
+            width : 200px;
         }
     }
 }
