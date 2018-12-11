@@ -1,0 +1,30 @@
+.logo {
+    .logo-img {
+        display : block;
+        padding : 10px;
+    }
+    .rm-logo-full {
+        width : 350px;
+    }
+    .rm-logo-icon {
+        width  : 50px;
+        height : 50px;
+    }
+    .logo-block {
+        padding         : 30px 10px;
+        border-bottom   : 1px solid @light-grey;
+        width           : 100%;
+        max-width       : 500px;
+        display         : flex;
+        justify-content : space-between;
+        .logo-links {
+            display        : flex;
+            flex-direction :  column;
+            a {
+                color           : @secondary-text;
+                text-decoration : none;
+                &:hover { color : @primary-text; }
+            }
+        }
+    }
+}

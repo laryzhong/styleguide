@@ -31,6 +31,21 @@ app.get('/buttons', function(req, res) {
 app.get('/branding', function (req, res) {
 	res.render('branding');
 });
+app.get('/logo', function (req, res) {
+	res.render('logo');
+});
+app.get('/blocks', function (req, res) {
+	res.render('blocks');
+});
+app.get('/forms', function (req, res) {
+	res.render('forms');
+});
+app.get('/illustrations', function (req, res) {
+	res.render('illustrations');
+});
+app.get('/photography', function (req, res) {
+	res.render('photography');
+});
 
 http.createServer(app).listen(port);
 
