@@ -28,6 +28,9 @@ app.get('/typography', function(req, res) {
 app.get('/buttons', function(req, res) {
 	res.render('buttons');
 });
+app.get('/branding', function (req, res) {
+	res.render('branding');
+});
 
 http.createServer(app).listen(port);
 
