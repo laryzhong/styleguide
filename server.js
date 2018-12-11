@@ -2,6 +2,7 @@ const http    = require('http');
 const express = require('express');
 const path    = require('path');
 const less    = require('less-middleware');
+const pageData = require('./data/index');
 
 const env  = process.env.NODE_ENV || 'development';
 
@@ -16,38 +17,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, 'public/views'));
 app.set('view engine', 'ejs');
 
-
-app.get('/', function(req, res) {
-	res.render('main');
+// render view path from index.js
+pageData.forEach(objData => {
+	const path = objData.content === 'main' ? '' : objData.content;
+	app.get(`/${path}`, (req, res) => res.render(objData.content));
 });
-app.get('/color-palette', function(req, res) {
-	res.render('color-palette');
-});
-app.get('/typography', function(req, res) {
-	res.render('typography');
-});
-app.get('/buttons', function(req, res) {
-	res.render('buttons');
-});
-app.get('/branding', function (req, res) {
-	res.render('branding');
-});
-app.get('/logo', function (req, res) {
-	res.render('logo');
-});
-app.get('/blocks', function (req, res) {
-	res.render('blocks');
-});
-app.get('/forms', function (req, res) {
-	res.render('forms');
-});
-app.get('/illustrations', function (req, res) {
-	res.render('illustrations');
-});
-app.get('/photography', function (req, res) {
-	res.render('photography');
-});
-
 
 http.createServer(app).listen(port);
 
