@@ -1,15 +1,7 @@
 .logo {
-    .logo-img {
-        display : block;
-        padding : 10px;
-    }
-    .rm-logo-full {
-        width : 350px;
-    }
-    .rm-logo-icon {
-        width  : 50px;
-        height : 50px;
-    }
+    display: flex;
+    .logo-wordmark {  width: 40%; }
+    .logo-icon { width: 20%; }
     .logo-block {
         padding         : 30px 10px;
         border-bottom   : 1px solid @light-grey;
@@ -17,6 +9,20 @@
         max-width       : 500px;
         display         : flex;
         justify-content : space-between;
+        .logo-img {
+            display : block;
+            padding : 10px;
+        }
+        .rm-logo-full {
+            width : 220px;
+        }
+        .rm-logo-icon {
+            width  : 40px;
+            height : 40px;
+        }
+        .rm-logo-white {
+            background: black;
+        }
         .logo-links {
             display        : flex;
             flex-direction :  column;
