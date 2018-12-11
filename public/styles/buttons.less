@@ -1,17 +1,133 @@
 .buttons {
+    .button-container {
+        display: flex;
+    }
+    .buttons-small,
+    .buttons-reg {
+        display        : flex;
+        flex-direction : column;
+        margin-right   : 50px;
+    }
+    .bg-blue {
+        background: @blue-50;
+        padding: 10px;
+    }
     .button {
-        padding: 10px 14px;
-        margin: 10px;
-        border: 1px solid #333;
-        border-radius: 5px;
-        text-decoration: none;
-        color : @primary-text;
-        font-weight: 500;
-        &-lg {
-            padding: 12px 16px;
-            background: @sky-50;
-            color: #fff;
-            border: 0;
+        font-size       : 17px;
+        color           : white;
+        margin          : 5px 0;
+        padding         : 12px 24px;
+        background      : @blue-50;
+        font-weight     : 500;
+        display         : inline-block;
+        text-decoration : none;
+        align-self      : flex-start;
+        letter-spacing  : -0.5px;
+        .transition(0.2s all ease);
+        .border-radius(4px);
+        &:hover {
+            text-decoration  : none;
+            color            : white;
+            cursor           : pointer;
+            background-color : @blue-60;
+            .transition(0.2s all ease);
+        }
+        &:active { background-color : @blue-60; }
+        &:visited { text-decoration : none; }
+        &:focus {
+            color           : white;
+            text-decoration : none;
+        }
+        &-wt {
+            background : white;
+            color      : @primary-text;
+            border     : 1px solid @grey-40;
+            &:hover {
+                background : #f7f7f7;
+                color      : @primary-text;
+                border     : 1px solid @grey-40;
+            }
+            &:focus { 
+                text-decoration : none;
+                color           : @primary-text;
+            }
+        }
+        &-teal {
+            color      : white;
+            background : @teal-50;
+            border     : 1px solid @teal-50;
+            &:hover {
+                color      : white;
+                background : @teal-50;
+                border     : 1px solid @teal-50;
+            }
+        }
+        &-coral {
+            color      : white;
+            background : @coral-50 ;
+            border     : 1px solid @coral-50;
+            &:hover {
+                color      : white;
+                background : @coral-40;
+                border     : 1px solid @coral-40;
+            }
+        }
+        &-clear {
+            color      : #fff;
+            background : rgba(255,255,255,0);
+            border     : 1px solid #fff;
+            &:hover {
+                color      : @primary-text;
+                background : #fff;
+                border     : 1px solid #fff;
+            }
+        }
+    }
+
+    .button-sm {
+        border         : 1px solid @blue-40;
+        background     : @blue-50 ;
+        padding        : 8px 16px;
+        color          : white;
+        font-size      : 14px;
+        font-weight    : 400;
+        margin-left    : 7px;
+        letter-spacing : -0.5px;
+        .transition(0.2s all ease);
+        .border-radius(4px);
+        &:hover {
+            border     : 1px solid @sky-50 ;
+            background : @blue-60;
+            color      : white;
+        }
+        &:active {
+            border     : 1px solid @blue-40 ;
+            background : @sky-50;
+        }
+        &-teal {
+            border     : 1px solid @teal-60  ;
+            background : @teal-50;
+            &:hover {
+                background : @teal-40;
+            }
+            &:active {
+                border     : 1px solid @teal-60;
+                background : @teal-50;
+            }
+        }
+        &-wt {
+            border     : 1px solid @grey-40 ;
+            background : white;
+            color      : @primary-text;
+            .transition(0.2s all ease);
+            .border-radius(4px);
+            &:hover {
+                color      : @primary-text;
+                background : @grey-10;
+            }
+            &:active {
+                border : 1px solid @primary-text;
+            }
         }
     }
 }
