@@ -7,7 +7,6 @@ document.getElementById('expand').addEventListener('click', e => {
 
 // collapse aside off screen
 document.getElementById('nav-toggle').addEventListener('click', () => {
-    // e.preventDefault();
 	const aside = document.getElementsByClassName('aside');
 	const content = document.getElementsByClassName('content');
 	const navToggle = document.getElementById('nav-toggle');
