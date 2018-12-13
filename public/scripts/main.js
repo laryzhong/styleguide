@@ -7,8 +7,8 @@ document.getElementById('expand').addEventListener('click', e => {
 
 // collapse aside off screen
 document.getElementById('nav-toggle').addEventListener('click', () => {
-	const aside = document.getElementsByClassName('aside');
-	const content = document.getElementsByClassName('content');
+	const aside     = document.getElementsByClassName('aside');
+	const content   = document.getElementsByClassName('content');
 	const navToggle = document.getElementById('nav-toggle');
 
 	aside[0].classList.toggle('nav-closed');
@@ -18,10 +18,10 @@ document.getElementById('nav-toggle').addEventListener('click', () => {
 
 // toggle hex vs rgb code on colour palette page
 const buttonList = document.querySelectorAll('button');
-const hexButton = buttonList[0];
-const rgbButton = buttonList[1];
-const colorRgb = document.querySelectorAll('.color-rgb');
-const colorHex = document.querySelectorAll('.color-hex');
+const hexButton  = buttonList[0];
+const rgbButton  = buttonList[1];
+const colorRgb   = document.querySelectorAll('.color-rgb');
+const colorHex   = document.querySelectorAll('.color-hex');
 
 hexButton.addEventListener('click', () => {
 	hexButton.classList.remove('selected');

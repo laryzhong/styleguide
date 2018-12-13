@@ -187,16 +187,15 @@
 
 <div class="content colors">
     <h1>Color Palette</h1>
-   
-    <div class="color-title">
-        <h3>Primary Colours</h3>
-        <span>
-            <button class="color-toggle selected">HEX</button>
-            <button class="color-toggle">RGB</button>
-        </span>
-    </div>
-
+    
     <div class="color-list">
+        <div class="color-title">
+            <!-- <h3>Primary Colours</h3> -->
+            <span>
+                <button class="color-toggle selected">HEX</button>
+                <button class="color-toggle">RGB</button>
+            </span>
+        </div>
         <div class="primary-colors">
             <% primaryColors.forEach(colorBlock => { %>
                 <ul class="color-block">
@@ -211,7 +210,7 @@
             <% }); %>
         </div>
 
-        <h3>Secondary Colours</h3>
+        <!-- <h3>Secondary Colours</h3> -->
         <div class="secondary-colors">
             <% secondaryColors.forEach(colorBlock => { %>
                 <ul class="color-block">

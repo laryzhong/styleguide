@@ -55,16 +55,25 @@ aside {
     width           : 20px;
     background      : rgba(242, 245, 247, 0.5);
     height          : 100%;
-    position        : absolute;
+    position        : fixed;
     left            : 230px;
     display         : flex;
     justify-content : center;
     align-items     : center;
     color           : @grey-40;
     .transition(0.2s all ease);
+    &::after {
+        position : absolute;
+        content  : '<';
+    }
     &:hover {
         background : rgba(223, 225, 226, 0.7);
         cursor     : pointer;
     }
-    &.nav-closed { left : 0; }
+    &.nav-closed { 
+        left : 0;
+        &::after {
+            content : '>';
+        }
+    }
 }

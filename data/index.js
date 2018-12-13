@@ -1,5 +1,5 @@
 module.exports = [
-	// Landing Page Data
+	// Page Data
 	{
 		title   : 'Styleguide | Roadmunk',
 		content : 'main',
@@ -39,5 +39,9 @@ module.exports = [
 	{
 		title   : 'Photography | Roadmunk',
 		content : 'photography',
+	},
+	{
+		title   : 'Core Values | Roadmunk',
+		content : 'core-values',
 	}
 ];
