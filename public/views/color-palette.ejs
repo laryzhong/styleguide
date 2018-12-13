@@ -4,88 +4,108 @@
     [
         {
             name : '@blue-5',
+            rgb  : 'rgb(235, 244, 252)',
             hex  : '#EBF4FC'
         },
         {
             name : '@blue-10',
+            rgb  : 'rgb(204, 227, 248)',
             hex  : '#CCE3F8'
         },
         {
             name : '@blue-40',
+            rgb  : 'rgb(41, 138, 228)',
             hex  : '#298AE4'
         },
         {
             name : '@blue-50',
+            rgb  : 'rgb(0, 116, 244)',
             hex  : '#0074e0'
         },
         {
             name : '@blue-60',
+            rgb  : 'rgb(0, 92, 188)',
             hex  : '#0061BC'
         }
     ],
     [
         {
             name : '@sky-5',
+            rgb  : 'rgb(235, 248, 254)',
             hex  : '#EBF8FE'
         },
         {
             name : '@sky-10',
+            rgb  : 'rgb(46, 186, 246)',
             hex  : '#CCEEFD'
         },
         {
             name : '@sky-40',
+            rgb  : 'rgb(0, 171, 245)',
             hex  : '#2EBAF6'
         },
         {
             name : '@sky-50',
+            rgb  : 'rgb(0, 171, 245)',
             hex  : '#00ABF5'
         },
         {
             name : '@sky-60',
+            rgb  : 'rgb(0, 143, 205)',
             hex  : '#008FCD'
         }
     ],
     [
         {
             name : '@teal-5',
+            rgb  : 'rgb(234, 251, 249)',
             hex  : '#EAFBF9'
         },
         {
             name : '@teal-10',
+            rgb  : 'rgb(204, 245, 241)',
             hex  : '#CCF5F1'
         },
         {
             name : '@teal-40',
+            rgb  : 'rgb(56, 217, 203)',
             hex  : '#38D9CB'
         },
         {
             name : '@teal-50',
+            rgb  : 'rgb(0, 207, 189)',
             hex  : '#00CFBD'
         },
         {
             name : '@teal-60',
+            rgb  : 'rgb(0, 173, 158)',
             hex  : '#00AD9E'
         },
     ],
     [
         {
             name : '@coral-5',
+            rgb  : 'rgb(255, 244, 241)',
             hex  : '#FFF4F1'
         },
         {
             name : '@coral-10',
+            rgb  : 'rgb(255, 228, 221)',
             hex  : '#FFE4DD'
         },
         {
             name : '@coral-40',
+            rgb  : 'rgb(255, 146, 117)',
             hex  : '#FF9275'
         },
         {
             name : '@coral-50',
+            rgb  : 'rgb(255, 123, 87)',
             hex  : '#FF7B57'
         },
         {
             name : '@coral-60',
+            rgb  : 'rgb(247, 102, 49)',
             hex  : '#F76631'
         },
     ]
@@ -96,56 +116,68 @@
     [
         {
             name : '@green-10',
+            rgb  : 'rgb(224, 248, 238)',
             hex  : '#E0F8EE'
         },
         {
             name : '@green-50',
+            rgb  : 'rgb(17, 204, 131)',
             hex  : '#11CC83'
         },
         {
             name : '@green-60',
+            rgb  : 'rgb(0, 163, 67)',
             hex  : '#00A343'
         }
     ],
     [
         {
             name : '@yellow-10',
+            rgb  : 'rgb(255, 248, 223)',
             hex  : '#FFF8DF'
         },
         {
             name : '@yellow-50',
+            rgb  : 'rgb(255, 204, 5)',
             hex  : '#FFCC05'
         },
         {
             name : '@yellow-60',
+            rgb  : 'rgb(254, 160, 46)',
             hex  : '#FEA02E'
         }
     ],
     [
         {
             name : '@indigo-10',
+            rgb  : 'rgb(237, 238, 248)',
             hex  : '#EDEEF8'
         },
         {
             name : '@indigo-50',
+            rgb  : 'rgb(73, 83, 180)',
             hex  : '#4953B4'
         },
         {
             name : '@indigo-60',
+            rgb  : 'rgb(56, 58, 155)',
             hex  : '#383A9B'
         }
     ],
     [
         {
             name : '@slate-10',
+            rgb  : 'rgb(245, 245, 245)',
             hex  : '#F5F5F5'
         },
         {
             name : '@slate-50',
+            rgb  : 'rgb(43, 52, 60)',
             hex  : '#2B343C'
         },
         {
             name : '@slate-60',
+            rgb  : 'rgb(33, 43, 53)',
             hex  : '#212B35'
         }
     ]
@@ -155,6 +187,15 @@
 
 <div class="content colors">
     <h1>Color Palette</h1>
+   
+    <div class="color-title">
+        <h3>Primary Colours</h3>
+        <span>
+            <button class="color-toggle selected">HEX</button>
+            <button class="color-toggle">RGB</button>
+        </span>
+    </div>
+
     <div class="color-list">
         <div class="primary-colors">
             <% primaryColors.forEach(colorBlock => { %>
@@ -162,25 +203,30 @@
                     <% colorBlock.forEach(color => { %>
                         <li class="<%= color.name %>" style="background-color: <%=color.hex %>;">
                             <p><%= color.name %></p>
-                            <p><%= color.hex %></p>
+                            <p class="color-rgb"><%= color.rgb %></p>
+                            <p class="color-hex"><%= color.hex %></p>
                         </li>
                     <% }); %>
                 </ul>
             <% }); %>
         </div>
+
+        <h3>Secondary Colours</h3>
         <div class="secondary-colors">
             <% secondaryColors.forEach(colorBlock => { %>
                 <ul class="color-block">
                     <% colorBlock.forEach(color => { %>
                         <li class="<%= color.name %>" style="background-color: <%=color.hex %>;">
                             <p><%= color.name %></p>
-                            <p><%= color.hex %></p>
+                            <p class="color-rgb"><%= color.rgb %></p>
+                            <p class="color-hex"><%= color.hex %></p>
                         </li>
                     <% }); %>
                 </ul>
             <% }); %>
         </div>
     </div>
+
 </div>
 
 <% include ./partials/end %>

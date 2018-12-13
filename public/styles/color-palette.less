@@ -1,23 +1,46 @@
 .colors {
-    width : 100%;
-    padding: 50px;
+    width   : 100%;
+    padding : 50px;
+    .color-title {
+        display         : flex;
+        justify-content : space-between;
+        margin-right    : 160px;
+        align-items     : center;
+        button {
+            padding    : 7px 15px;
+            background : white;
+            margin     : 0;
+            font-size  : 14px;
+            &.selected {
+                border        : none;
+                border-bottom : 2px solid @blue-50;
+                color         : @blue-50;
+                font-weight   : 500;
+            }
+            &:not(.selected) {
+                border : none;
+                color  : @grey-30;
+            }
+        }
+    }
+    .color-rgb { display : none; }
     .primary-colors,
     .secondary-colors {
-        display: flex;
+        display : flex;
         .color-block {
-            list-style-type: none;
-            width: 100%;
-            max-width: 300px;
-            padding-left: 0;
-            font-size: 14px;
-            margin: 10px 15px 10px 0;
+            list-style-type : none;
+            width           : 100%;
+            max-width       : 320px;
+            padding-left    : 0;
+            font-size       : 14px;
+            margin          : 10px 15px 10px 0;
             li {
-                display: flex;
-                padding: 8px 30px;
-                justify-content: space-between;
-                color: #fff;
+                display         : flex;
+                padding         : 8px 30px;
+                justify-content : space-between;
+                color           : #fff;
                 p {
-                    flex-direction: row;
+                    flex-direction : row;
                 }
                 &[class$="blue-5"],
                 &[class$="blue-10"] {

@@ -1,6 +1,6 @@
 version: '2'
 services:
-  demux:
+  styleguide:
     image: node:6
     ports:
       - "3030:3030"
