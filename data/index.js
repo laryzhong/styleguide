@@ -43,5 +43,13 @@ module.exports = [
 	{
 		title   : 'Core Values | Roadmunk',
 		content : 'core-values',
+	},
+	{
+		title   : 'Product to Product | Roadmunk',
+		content : 'product-to-product',
+	},
+	{
+		title   : 'Voice & Tone | Roadmunk',
+		content : 'voice',
 	}
 ];
