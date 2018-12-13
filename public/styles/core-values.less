@@ -1,17 +1,44 @@
 .core-values {
     .values {
         display : flex;
-        padding : 0 100px;
         .value {
-            width      : 25%;
-            margin     : 1%;
-            padding    : 30px 30px 10px 30px;
+            width      : 23%;
+            margin     : 1% 2%;
+            padding    : 25px 25px 10px 25px;
             background : white;
             box-shadow :  0 0 5px 1px rgba(0,0,0,0.1);
-            h4 { margin-bottom : 0; }
+            h3 { margin-bottom : 0; }
+            p { color : @secondary-text; }
+            .img-container { width : 100%; }
             img {
-                width : 100%;
+                max-width : 250px;
+                display   : block;
+                margin    : 0 auto;
             }
+        }
+        .empathy {
+            span { color : @coral-50; }
+            .img-container { background-color : rgba(255, 123, 87, 0.1); }
+        }
+        .driven {
+            span { color : @green-50; }
+            .img-container { background-color : rgba(17, 204, 131, 0.1);}
+        }
+        .trust {
+            span { color : @sky-50; }
+            .img-container { background-color : rgba(0, 171, 245, 0.1);}
+        }
+        .balance {
+            span { color : @blue-50; }
+            .img-container {  background-color : rgba(0, 116, 244, 0.1);}
+        }
+        .learning {
+            span { color : @teal-50; }
+            .img-container { background-color : rgba(0, 207, 189, 0.1);}
+        }
+        .fun {
+            span { color : @yellow-50; }
+            .img-container { background-color : rgba(255, 204, 5, 0.1);}
         }
     }
 }
