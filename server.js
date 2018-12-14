@@ -20,7 +20,7 @@ app.set('view engine', 'ejs');
 // render view path from index.js
 pageData.forEach(objData => {
 	const path = objData.content === 'main' ? '' : objData.content;
-	app.get(`/${path}`, (req, res) => res.render(objData.content));
+	app.get(`/${path}`, (req, res) => res.render(objData.content, Object.assign({}, objData, { env: env })));
 });
 
 http.createServer(app).listen(port);
