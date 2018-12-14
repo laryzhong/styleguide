@@ -1,0 +1,32 @@
+.voice {
+    .voice-description {
+        width     : 62%;
+        // max-width : 800px;
+    }
+    .voice-desc {
+        &_rule {
+            width      : 62%;
+            // max-width  : 800px;
+            margin-top : 70px;
+            h4 { margin-bottom : 0; }
+        }
+        &_example {
+            display : flex;
+            .example {
+                width      : 400px;
+                background : @aside-bg;
+                padding    : 20px;
+                h4 { margin : 0 0 20px 0; }
+                &:first-child { margin-right : 30px; }
+                &-do {
+                    border-top : 5px solid @green-50;
+                    h4 { color : @green-50; }
+                }
+                &-dont {
+                    border-top : 5px solid @coral-50;
+                    h4 { color : @coral-50; }
+                }
+            }
+        }
+    }
+}
