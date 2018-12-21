@@ -6,16 +6,23 @@
 		"start": "node server.js"
 	},
 	"dependencies": {
+		"@babel/core": "^7.2.2",
 		"body-parser": "1.15.x",
-		"browser-sync": "^2.18.12",
+		"browser-sync": "^2.26.3",
 		"consolidate": "^0.15.1",
 		"cookie-parser": "1.4.x",
 		"ejs": "^2.6.1",
 		"express": "4.13.x",
+		"gulp": "^4.0.0",
+		"gulp-autoprefixer": "^6.0.0",
+		"gulp-babel": "^8.0.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-less": "^4.0.1",
 		"less-middleware": "2.1.x",
 		"static-favicon": "^2.0.0-alpha"
 	},
 	"devDependencies": {
-		"eslint-config-roadmunk": "roadmunk/eslint-config-roadmunk"
+		"eslint-config-roadmunk": "roadmunk/eslint-config-roadmunk",
+		"gulp-ejs": "^3.3.0"
 	}
 }

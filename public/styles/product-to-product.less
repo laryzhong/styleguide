@@ -1,31 +1,111 @@
 .product-to-product {
-    .color-block {
-        display : inline-block;
-        width   : 150px;
-        height  : 85px;
+    section {
+        margin          : 100px 0;
+        display         : flex;
+        justify-content : space-between;
+        & > div:nth-of-type(1) {
+            width : 25%;
+        }
+        & > div:nth-of-type(2) {
+            display : inline-block;
+            width   : 65%;
+        }
+        p { line-height : 1.4; }
     }
-    .ptop-colors > div {
-        display : inline-block;
-        border  : 1px solid black;
-        margin  : 5px;
-        p {
-            margin       : 5px 0;
-            padding-left : 5px;
+    .ptop-personality {
+        .personality-values_list {
+            display         : flex;
+            justify-content : space-between;
+            .personality-value {
+                text-align : center;
+            }
+            ul {
+                padding-left : 0;
+                li {
+                    list-style-type : none;
+                    padding         : 4px 0;
+                }
+            }
         }
     }
-    .light-blue { background-color : #84e3dc; }
-    .yellow { background-color : #ffdf29; }
-    .coral { background-color : #fd7760; }
-    .navy { background-color : #1f439b; }
-    .green { background-color : #00bd81; }
-    .ptop-logos {
-        margin-top : 20px;
-        display    : flex;
-        width      : 450px;
-        flex-wrap  : wrap;
+    .ptop-colors {
+        display         : flex;
+        justify-content : space-between;
+        .ptop-colors_blocks {
+            display        : flex;
+            flex-direction :  column;
+            & > div {
+                margin : 5px;
+                width  : 20%;
+            }
+            & > div:nth-of-type(1) {
+                align-items : flex-end;
+            }
+            .color-block_row {
+                display : block;
+                width   : 100%;
+                &:nth-of-type(1) {
+                    width           : 100%;
+                    padding-right   : 10px;
+                    display         : flex;
+                    justify-content : flex-end;
+                    .color-block_container {
+                        display         : flex;
+                        flex-direction  : column;
+                    }
+                }
+                &:nth-of-type(2) {
+                    display         : flex;
+                    flex-direction  : row;
+                    justify-content : space-between;
+                }
+                & > div {
+                    width        : 100%;
+                    margin-right : 10px;
+                }
+                .black { width : 183px; }
+            }
+        }
+        .color-block {
+            display : inline-block;
+            width   : 100%;
+            height  : 65px;
+        }
+        p { margin : 0; }
+        .light-blue { background-color : #84e3dc; }
+        .yellow { background-color : #ffdf29; }
+        .coral { background-color : #fd7760; }
+        .navy { background-color : #1f439b; }
+        .green { background-color : #00bd81; }
+        .black { background-color : #000000; }
+    }
+    .ptop-logo {
         img {
-            width  : 150px;
-            margin : 0;
+            &:nth-of-type(1) {
+                max-width     : 400px;
+                margin-bottom : 50px;
+            }
+            &:nth-of-type(2) { max-width : 280px; }
+            &:nth-of-type(3) { max-width : 700px; }
+        }
+    }
+    .ptop-events {
+        &_imgs {
+            .events_example { width : 700px; }
+        }
+    }
+    .ptop-podcast {
+        &_imgs {
+            .pod_logo {
+                width        : 300px;
+                margin-right : 50px;
+            }
+            .pod_example { width : 400px; }
+        }
+    }
+    .ptop-blog {
+        &_imgs {
+            .blog_logo { width : 600px; }
         }
     }
 }

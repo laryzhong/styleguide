@@ -200,10 +200,8 @@
                     <% colorBlock.forEach(color => { %>
                         <li class="<%= color.name %>" style="background-color: <%=color.hex %>;">
                             <p><%= color.name %></p>
-                            <p class="color-rgb" onClick="copyToClipboard('#0074e0');"><%= color.rgb %></p>
+                            <p class="color-rgb"><%= color.rgb %></p>
                             <p class="color-hex"><%= color.hex %></p>
-                            <!-- <textarea onclick="copy()" name="" id="hex-val" cols="10" rows="1"><%= color.hex %></textarea> -->
-                            <!-- <button onclick="copy()">Copy</button> -->
                         </li>
                     <% }); %>
                 </ul>

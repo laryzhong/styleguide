@@ -1,9 +1,9 @@
 const gulp        = require('gulp');
 const less        = require('gulp-less');
-const watch       = require('gulp-watch');
-const prefix      = require('gulp-autoprefixer');
-const plumber     = require('gulp-plumber');
-const livereload  = require('gulp-livereload');
+// const watch       = require('gulp-watch');
+// const prefix      = require('gulp-autoprefixer');
+// const plumber     = require('gulp-plumber');
+// const livereload  = require('gulp-livereload');
 const browserSync = require('browser-sync').create();
 const nodemon     = require('gulp-nodemon');
 
