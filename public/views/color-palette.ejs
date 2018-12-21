@@ -200,8 +200,8 @@
                     <% colorBlock.forEach(color => { %>
                         <li class="<%= color.name %>" style="background-color: <%=color.hex %>;">
                             <p><%= color.name %></p>
-                            <p class="color-rgb"><%= color.rgb %></p>
-                            <p class="color-hex"><%= color.hex %></p>
+                            <p class="color-code color-rgb"><%= color.rgb %></p>
+                            <p class="color-code color-hex"><%= color.hex %></p>
                         </li>
                     <% }); %>
                 </ul>
@@ -215,8 +215,8 @@
                     <% colorBlock.forEach(color => { %>
                         <li class="<%= color.name %>" style="background-color: <%=color.hex %>;">
                             <p><%= color.name %></p>
-                            <p class="color-rgb"><%= color.rgb %></p>
-                            <p class="color-hex"><%= color.hex %></p>
+                            <p class="color-code color-rgb"><%= color.rgb %></p>
+                            <p class="color-code color-hex"><%= color.hex %></p>
                         </li>
                     <% }); %>
                 </ul>

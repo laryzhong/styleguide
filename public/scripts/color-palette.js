@@ -6,6 +6,7 @@ const rgbButton  = buttonList[1];
 const colorRgb   = document.querySelectorAll('.color-rgb');
 const colorHex   = document.querySelectorAll('.color-hex');
 
+// show hex color code + hide RGB color code
 hexButton.addEventListener('click', () => {
 	hexButton.classList.remove('selected');
 	rgbButton.classList.remove('selected');
@@ -19,6 +20,8 @@ hexButton.addEventListener('click', () => {
 		colorHex[i].style.display = 'block';
 	}
 });
+
+// show RGB color code + hide hex color code
 rgbButton.addEventListener('click', () => {
 	rgbButton.classList.remove('selected');
 	hexButton.classList.remove('selected');
@@ -34,12 +37,29 @@ rgbButton.addEventListener('click', () => {
 });
 
 // copy hex or rgb value to clipboard
-const copyToClipboard = str => {
-	const el = document.createElement('textarea');
-	el.value = str;
-	document.body.appendChild(el);
-	el.select();
-	document.execCommand('copy');
-	console.log('copied!');
-	document.body.removeChild(el);
-};
+const colorCode = document.querySelectorAll('.color-code');
+
+colorCode.forEach(color => {
+	color.addEventListener('click', () => {
+		const selection = window.getSelection();
+		const range     = document.createRange();
+		range.selectNodeContents(color);
+		selection.removeAllRanges();
+		selection.addRange(range);
+
+		try {
+			document.execCommand('copy');
+			selection.removeAllRanges();
+
+			const original    = color.textContent;
+			color.textContent = 'Copied!';
+			setTimeout(() => {
+				color.textContent = original;
+				color.classList.remove('success');
+			}, 800);
+
+		} catch (e) {
+			console.log('didnt work');
+		}
+	});
+});
