@@ -1,6 +1,11 @@
 .buttons {
     .button-container {
-        display: flex;
+        display : flex;
+    }
+    .button-state {
+        width          : 30%;
+        display        : flex;
+        flex-direction : column;
     }
     .buttons-small,
     .buttons-reg {
@@ -9,8 +14,9 @@
         margin-right   : 50px;
     }
     .bg-blue {
-        background: @blue-50;
-        padding: 10px;
+        background : @blue-50;
+        padding    : 10px;
+        width      : 50%;
     }
     .button {
         font-size       : 17px;
@@ -25,38 +31,38 @@
         letter-spacing  : -0.5px;
         .transition(0.2s all ease);
         .border-radius(4px);
-        &:hover {
-            text-decoration  : none;
-            color            : white;
-            cursor           : pointer;
-            background-color : @blue-60;
-            .transition(0.2s all ease);
-        }
-        &:active { background-color : @blue-60; }
-        &:visited { text-decoration : none; }
-        &:focus {
-            color           : white;
-            text-decoration : none;
-        }
+        // &:hover {
+        //     text-decoration  : none;
+        //     color            : white;
+        //     cursor           : pointer;
+        //     background-color : @blue-60;
+        //     .transition(0.2s all ease);
+        // }
+        // &:active { background-color : @blue-60; }
+        // &:visited { text-decoration : none; }
+        // &:focus {
+        //     color           : white;
+        //     text-decoration : none;
+        // }
         &-wt {
             background : white;
             color      : @primary-text;
             border     : 1px solid @grey-40;
-            &:hover {
+            &_hover {
                 background : #f7f7f7;
                 color      : @primary-text;
                 border     : 1px solid @grey-40;
             }
-            &:focus { 
-                text-decoration : none;
-                color           : @primary-text;
-            }
+            // &:focus { 
+            //     text-decoration : none;
+            //     color           : @primary-text;
+            // }
         }
         &-teal {
             color      : white;
             background : @teal-50;
             border     : 1px solid @teal-50;
-            &:hover {
+            &_hover {
                 color      : white;
                 background : @teal-50;
                 border     : 1px solid @teal-50;
@@ -66,7 +72,7 @@
             color      : white;
             background : @coral-50 ;
             border     : 1px solid @coral-50;
-            &:hover {
+            &_hover {
                 color      : white;
                 background : @coral-40;
                 border     : 1px solid @coral-40;
@@ -76,11 +82,14 @@
             color      : #fff;
             background : rgba(255,255,255,0);
             border     : 1px solid #fff;
-            &:hover {
+            &_hover {
                 color      : @primary-text;
                 background : #fff;
                 border     : 1px solid #fff;
             }
+        }
+        &-state_hover {
+            background-color : @blue-60;
         }
     }
 
